@@ -1,3 +1,9 @@
+:root{
+  --display-loader:none;
+  --imageUrl:url();
+  --image-display:none;
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +42,48 @@
     transform: rotate(360deg);
   }
 }
+
+.h1{
+  border: 2px solid blueviolet;
+}
+
+.link a{
+  text-decoration: none;
+}
+
+.gameee{
+  background-color: red !important; 
+}
+.ejfhej{
+  background-color: blue !important; 
+}
+
+
+.loader{
+  background-color: #282c3467;
+  display: var(--display-loader);
+}
+.outerImage{
+  width: 100%;
+  height: 100vh;
+  background-color:#282c349c;
+  display: var(--image-display);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.innerImage{
+  background-image: var(--imageUrl);
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* .active{
+  background-color: rebeccapurple;
+  color: aliceblue;
+  padding: 4px;
+} */

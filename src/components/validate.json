@@ -1,0 +1,119 @@
+[
+    {
+        "name": "name",
+        "conditions": [
+            {
+                "condition": "obj.name === '' || obj.name === undefined",
+                "error": "Name is required !"
+            },
+            {
+                "condition": "!/^[a-zA-Z]+$/.test(obj.name)",
+                "error": "Name must be alphabet"
+            }
+        ]
+    },
+    {
+        "name": "email",
+        "conditions": [
+            {
+                "condition": "obj.email === '' || obj.email === undefined",
+                "error": "Email is required !"
+            },
+            {
+                "condition": "!(obj.email.includes('@gmail.com') || obj.email.includes('@mailinator.com'))",
+                "error": "Email is invalid !"
+            }
+        ]
+    },
+    {
+        "name": "phone",
+        "conditions": [
+            {
+                "condition": "obj.phone === '' || obj.phone === undefined",
+                "error": "Number must be required!"
+            },
+           
+            {
+                "condition":"obj.phone.length !== 10",
+                "error": "Number is invalid"
+            }
+           
+        ]
+    },
+    {
+        "name": "date",
+        "conditions": [
+            {
+                "condition": "obj.date === '' || obj.date === undefined",
+                "error": "D.O.B. must be required!"
+            },
+           
+            {
+                "condition":"(new Date(obj.date) >= new Date(above18))",
+                "error": "Date should be 18 +"
+            }
+        ]
+    },
+    {
+        "name": "gender",
+        "conditions": [
+            {
+                "condition": "obj.gender === '' || obj.gender === undefined",
+                "error": "Gender must be required!"
+            }
+        ]
+    },
+    {
+        "name": "hobbies",
+        "conditions": [
+            {
+                "condition": "obj.hobbies.length === 0",
+                "error": "hobbies must be required!"
+            },
+            {
+                "condition": "obj.hobbies.length < 3",
+                "error": "Hobbies must be 3 selected !"
+            }
+        ]
+    },
+    {
+        "name": "profile",
+        "conditions": [
+            {
+                "condition": "!obj.profile",
+                "error": "profile must be required!"
+            }
+        ]
+    },
+    {
+        "name": "password",
+        "conditions": [
+            {
+                "condition": "obj.password === '' || obj.password === undefined",
+                "error": "password must be required!"
+            },
+            {
+                "condition": "obj.password.length < 6",
+                "error": "Password required minimum 6 character"
+            },
+            {
+                "otherField":"conpassword",
+                "condition": "obj.password === obj.conpassword",
+                "error": ""
+            }
+        ]
+    },
+    {
+        "name": "conpassword",
+        "conditions": [
+            {
+                "condition": "obj.conpassword === '' || obj.conpassword === undefined",
+                "error": "confirm password must be required!"
+            },
+            {
+                "condition": "obj.password !== obj.conpassword",
+                "error": "Password is not matched!"
+            }
+        ]
+    }
+]
