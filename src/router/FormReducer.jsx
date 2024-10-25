@@ -41,7 +41,7 @@ function FormReducer() {
             console.log(obj);
         }
         else {
-          obj[e.target.name] = e.target.value
+          obj[e.target.name] = e.target.valueefe3fefer
           blankObj[e.target.name] = ''
         }
         setobj({...obj})
